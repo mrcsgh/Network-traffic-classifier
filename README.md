@@ -78,6 +78,33 @@ Inside this main folder, there are **three subdirectories** used to organize the
 
 This structure helps ensure a clean pipeline between the traffic capture component and the detection component based on the AI model.
 
+### 6. Trainning and evaluating different machine learning models
+#### 6.1 Dataset description:
+The file 'data.csv' contains more than 225,000 network traffic examples. Bellow you can see some relevant features:
+| Feature                | Type     |
+|------------------------|----------|
+| 'Source IP'            | object   |
+| 'Source Port'            | int      |
+| 'Destination IP'       | object   |
+| 'Destination Port'       | int      |
+| 'Protocol'             | int      |
+| 'Timestamp'            | object   |
+
+> The dataset contains **85 columns**.
+
+### 6.2 Data preprocessing
+Before training the models, 'pandas' and 'ipaddress' libraries are used to preproces the data, deleting and modifying some columns. Also, data was subdivided using 'sklearn' and then scaled using 'RobustScaler()'.
+
+### 6.3 Training models
+- **Logistic Regression**
+- **KMEANS**
+- **Gaussian Naive Bayes**
+- **Artificial Neural Network**
+
+### 6.4 Evaluating models
+For each model, except for KMEANS, the precision, recall and F1-Score (metric that relates the previous ones) are evaluated. In addition, ANN is leveraged to compare results using scaled and unscaled data, thus demonstrating the importance of scaling.
+
+## 7. Applying the best model obtained to classify the obtained data using the Traffic Capture Tool
 
 ## Authors and Contributions
 
