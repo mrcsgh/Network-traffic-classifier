@@ -1,0 +1,9 @@
+pyshark
+pwntools
+pandas
+tensorflow
+joblib
+numpy
+scikit-learn
+matplotlib
+ipython
