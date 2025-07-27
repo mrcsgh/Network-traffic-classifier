@@ -78,9 +78,9 @@ Inside this main folder, there are **three subdirectories** used to organize the
 
 This structure helps ensure a clean pipeline between the traffic capture component and the detection component based on the AI model.
 
-### 6. Trainning and evaluating different machine learning models
+### 6. Trainning and evaluating different machine learning models (`models_dev_eng.ipynb` or `models_dev_esp.ipynb`)
 #### 6.1 Dataset description:
-The file `data.csv` contains more than 225,000 network traffic examples. Bellow you can see some relevant features:
+The file `data.csv` contains over 225,000 examples of network traffic. Bellow are some relevant features:
 | Feature                | Type     |
 |------------------------|----------|
 | `Source IP`            | object   |
@@ -93,7 +93,7 @@ The file `data.csv` contains more than 225,000 network traffic examples. Bellow 
 > The dataset contains **85 columns**.
 
 ### 6.2 Data preprocessing
-Before training the models, `pandas` and `ipaddress` libraries are used to preproces the data, deleting and modifying some columns. Also, data was subdivided using `sklearn` and then scaled using `RobustScaler()`.
+Before training the models, the data is preprocessed using the `pandas` and `ipaddress` libraries. This involves deleting and modifying certain columns. Also, data was split using `sklearn` and then scaled using `RobustScaler()`.
 
 ### 6.3 Training models
 - **Logistic Regression**
@@ -102,9 +102,11 @@ Before training the models, `pandas` and `ipaddress` libraries are used to prepr
 - **Artificial Neural Network**
 
 ### 6.4 Evaluating models
-For each model, except for KMEANS, the precision, recall and F1-Score (metric that relates the previous ones) are evaluated. In addition, ANN is leveraged to compare results using scaled and unscaled data, thus demonstrating the importance of scaling.
+For each model (except for KMEANS) precision, recall and F1-Score (metric that relates the previous ones) are evaluated. In addition, ANN is leveraged to compare results using scaled and unscaled data, thus demonstrating the importance of scaling.
 
 ## 7. Applying the best model obtained to classify the obtained data using the Traffic Capture Tool
+`trained_traffic_classifier.keras`, `scaler.pkl` and `imputer.pkl` are uploaded in the `classifier.py` script to be applied to the obtained datasets.
+
 
 ## Authors and Contributions
 
