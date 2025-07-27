@@ -104,7 +104,7 @@ Before training the models, the data is preprocessed using the `pandas` and `ipa
 ### 6.4 Evaluating models
 For each model (except for KMEANS) precision, recall and F1-Score (metric that relates the previous ones) are evaluated. In addition, ANN is leveraged to compare results using scaled and unscaled data, thus demonstrating the importance of scaling.
 
-## 7. Applying the best model obtained to classify the obtained data using the Traffic Capture Tool
+### 7. Applying the best model obtained to classify the obtained data using the Traffic Capture Tool
 `trained_traffic_classifier.keras`, `scaler.pkl` and `imputer.pkl` are uploaded in the `classifier.py` script to be applied to the obtained datasets.
 
 
