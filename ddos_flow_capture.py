@@ -403,7 +403,7 @@ def start_capture(): # 3
             process_packet(pkt) # 4
             check_expired_flows() # 5
 
-            if packet_count == 10000:
+            if packet_count == 5000:
                 print(f"Generating file {OUTPUT_CSV}")
                 for flow in flows.values():
                     export_flow(flow) # 6
