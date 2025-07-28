@@ -113,7 +113,7 @@ For each model (except for KMEANS) precision, recall and F1-Score (metric that r
 This project is a collaboration between two developers combining machine learning with real-time network traffic analysis:
 
 - [@mrcsgh](https://github.com/mrcsgh)  
-  Responsible for developing, training, and validating the **machine learning model** used to classify network traffic based on the CIC-DDoS2019 dataset.
+  Responsible for developing, training, and validating the **machine learning model** used to classify network traffic based on the CIC-DDoS2019 dataset, and integrating AI with network traffic capture.
 
 - [@ctfhacks](https://github.com/ctfhacks)  
   Developed the Python-based system for **real-time network traffic capture**, data extraction, CSV generation, and integration with the AI model for detection.
